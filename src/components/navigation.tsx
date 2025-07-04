@@ -29,12 +29,12 @@ export default function Navigation() {
 
 	return (
 		<nav>
-			<ul className="flex gap-4 items-center">
+			<ul className="flex gap-8 items-center">
 				{navigationItems.map((item: NavigationItem) => (
 					<li key={item.label}>
 						<Link
 							href={item.href}
-							className={pathname === item.href ? 'text-primary underline' : 'hover:underline'}
+							className={`uppercase font-medium ${pathname === item.href ? 'text-primary underline' : 'hover:underline'}`}
 						>
 							{item.label}
 						</Link>

@@ -3,8 +3,7 @@ import { JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 
 const jetBrainsMono = JetBrains_Mono({
-	variable: '--font-jetbrainsMono',
-	weight: ['400', '500', '600'],
+	weight: ['400', '500', '700'],
 	subsets: ['latin'],
 });
 
@@ -20,7 +19,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={`${jetBrainsMono.variable}`}>{children}</body>
+			<body className={`${jetBrainsMono.className}`}>{children}</body>
 		</html>
 	);
 }
