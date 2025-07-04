@@ -29,21 +29,38 @@ export default function Navigation() {
 
 	return (
 		<nav>
-			<ul className="flex gap-8 items-center">
-				{navigationItems.map((item: NavigationItem) => (
-					<li key={item.label}>
-						<Link
-							href={item.href}
-							className={`uppercase font-medium ${pathname === item.href ? 'text-primary underline' : 'hover:underline'}`}
-						>
-							{item.label}
-						</Link>
-					</li>
-				))}
-				<Button>
-					<Link href="/hire-me">Hire me</Link>
-				</Button>
-			</ul>
+			<DesktopNavigation pathname={pathname} />
+			<MobileNavigation pathname={pathname} />
 		</nav>
+	);
+}
+
+function DesktopNavigation({ pathname }: { pathname: string }) {
+	return (
+		<ul className="hidden xl:flex gap-8 items-center">
+			{navigationItems.map((item: NavigationItem) => (
+				<li key={item.label}>
+					<Link
+						href={item.href}
+						className={`uppercase font-medium ${pathname === item.href ? 'text-primary underline' : 'hover:underline'}`}
+					>
+						{item.label}
+					</Link>
+				</li>
+			))}
+			<HireMeButton />
+		</ul>
+	);
+}
+
+function MobileNavigation({ pathname }: { pathname: string }) {
+	return <ul className="xl:hidden">mob nav</ul>;
+}
+
+function HireMeButton() {
+	return (
+		<Button>
+			<Link href="/hire-me">Hire me</Link>
+		</Button>
 	);
 }
