@@ -80,25 +80,30 @@ function SideNavigation({
 	pathname: string;
 	onClose: () => void;
 }) {
-	if (!show) return <></>;
-
 	return (
-		<ul className="flex flex-col gap-4 py-8 px-12 fixed top-0 right-0 h-full bg-background">
-			{navigationItems.map((item: NavigationItem) => (
-				<li key={item.label}>
-					<Link
-						href={item.href}
-						className={`uppercase font-medium ${pathname === item.href ? 'text-primary underline' : 'hover:underline'}`}
-					>
-						{item.label}
-					</Link>
-				</li>
-			))}
-			<HireMeButton />
-			<span className="text-xl absolute top-4 right-4 leading-none" onClick={onClose}>
-				X
-			</span>
-		</ul>
+		<div
+			className={`xl:hidden py-8 fixed top-0 right-0 h-full bg-background transition-[width] overflow-hidden max-w-max ${show ? 'w-[190px]' : 'w-0'}`}
+		>
+			<ul
+				className={`flex flex-col gap-4 h-full transition-[padding] duration-400 overflow-hidden max-w-max pl-12 ${show ? 'pr-12' : 'pr-0'}`}
+			>
+				{navigationItems.map((item: NavigationItem) => (
+					<li key={item.label}>
+						<Link
+							href={item.href}
+							className={`uppercase font-medium ${pathname === item.href ? 'text-primary underline' : 'hover:underline'}`}
+						>
+							{item.label}
+						</Link>
+					</li>
+				))}
+				<HireMeButton />
+				{/* TODO: add icon here */}
+				<span className="text-xl absolute top-4 right-4 leading-none" onClick={onClose}>
+					X
+				</span>
+			</ul>
+		</div>
 	);
 }
 
