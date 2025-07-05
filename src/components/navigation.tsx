@@ -3,7 +3,8 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
+import { CiMenuFries } from 'react-icons/ci';
 
 type NavigationItem = {
 	label: string;
@@ -26,24 +27,24 @@ const navigationItems = [
 ];
 
 export default function Navigation() {
-	const pathname = usePathname();
-
 	return (
 		<nav>
-			<DesktopNavigation pathname={pathname} />
-			<MobileNavigation pathname={pathname} />
+			<DesktopNavigation />
+			<MobileNavigation />
 		</nav>
 	);
 }
 
-function DesktopNavigation({ pathname }: { pathname: string }) {
+function DesktopNavigation() {
+	const pathname = usePathname();
+
 	return (
 		<ul className="hidden xl:flex gap-8 items-center">
 			{navigationItems.map((item: NavigationItem) => (
 				<li key={item.label}>
 					<Link
 						href={item.href}
-						className={`uppercase font-medium ${pathname === item.href ? 'text-primary underline' : 'hover:underline'}`}
+						className={`uppercase font-medium border-primary ${pathname === item.href ? 'text-primary border-b' : 'hover:border-b'}`}
 					>
 						{item.label}
 					</Link>
@@ -54,56 +55,42 @@ function DesktopNavigation({ pathname }: { pathname: string }) {
 	);
 }
 
-function MobileNavigation({ pathname }: { pathname: string }) {
-	const [showSideNav, setShowSideNav] = useState(false);
-
+function MobileNavigation() {
 	return (
-		<>
-			<div className="xl:hidden" onClick={() => setShowSideNav(true)}>
-				mob nav
-			</div>
-			<SideNavigation
-				show={showSideNav}
-				pathname={pathname}
-				onClose={() => setShowSideNav(false)}
-			/>
-		</>
+		<Sheet>
+			<SheetTrigger className="xl:hidden">
+				<CiMenuFries className="text-primary text-[2rem]" />
+			</SheetTrigger>
+			<SheetContent className="px-8 py-12 border-l-0">
+				<SideNavigationContent />
+			</SheetContent>
+		</Sheet>
 	);
 }
 
-function SideNavigation({
-	show,
-	pathname,
-	onClose,
-}: {
-	show: boolean;
-	pathname: string;
-	onClose: () => void;
-}) {
+function SideNavigationContent() {
+	const pathname = usePathname();
+
 	return (
-		<div
-			className={`xl:hidden py-8 fixed top-0 right-0 h-full bg-background transition-[width] overflow-hidden max-w-max ${show ? 'w-[190px]' : 'w-0'}`}
-		>
-			<ul
-				className={`flex flex-col gap-4 h-full transition-[padding] duration-400 overflow-hidden max-w-max pl-12 ${show ? 'pr-12' : 'pr-0'}`}
-			>
+		<>
+			<SheetTitle>Navigation menu</SheetTitle>
+			<div className="py-12">
+				<span className="block text-xl font-bold text-center">LOGO</span>
+			</div>
+			<ul className="flex flex-col gap-4">
 				{navigationItems.map((item: NavigationItem) => (
 					<li key={item.label}>
 						<Link
 							href={item.href}
-							className={`uppercase font-medium ${pathname === item.href ? 'text-primary underline' : 'hover:underline'}`}
+							className={`uppercase font-medium ${pathname === item.href ? 'text-primary border-b border-primary' : 'hover:borer-b'}`}
 						>
 							{item.label}
 						</Link>
 					</li>
 				))}
 				<HireMeButton />
-				{/* TODO: add icon here */}
-				<span className="text-xl absolute top-4 right-4 leading-none" onClick={onClose}>
-					X
-				</span>
 			</ul>
-		</div>
+		</>
 	);
 }
 
