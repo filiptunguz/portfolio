@@ -3,7 +3,7 @@ import Narrower from '@/components/narrower';
 import { Button } from '@/components/ui/button';
 import { MdOutlineFileDownload } from 'react-icons/md';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import { ReactNode } from 'react';
+import SocialMediaIcon from '@/components/ui/social-media-icon';
 
 export default function HeadingSection() {
 	return (
@@ -77,27 +77,5 @@ function ProfileHeadingPart() {
 				</div>
 			</div>
 		</div>
-	);
-}
-
-function SocialMediaIcon({
-	children,
-	href,
-	title,
-}: {
-	children: ReactNode;
-	href: string;
-	title: string;
-}) {
-	return (
-		<a
-			href={href}
-			target="_blank"
-			rel="noopener noreferrer"
-			title={title}
-			className="rounded-full border border-primary text-primary p-3 text-[1.25rem] hover:text-primary-foreground hover:bg-primary transition-all"
-		>
-			{children}
-		</a>
 	);
 }
