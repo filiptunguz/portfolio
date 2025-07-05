@@ -10,28 +10,28 @@ export default function ProjectsSection() {
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
 					<ProjectCard
 						title="Project Title"
-						src="/project-1.jpg"
+						src="/assets/project-1.jpg"
 						alt="Projekat"
 						description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
 						href="/project-1"
 					/>
 					<ProjectCard
 						title="Project Title"
-						src="/project-2.jpg"
+						src="/assets/project-2.jpg"
 						alt="Projekat"
 						description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
 						href="/project-2"
 					/>
 					<ProjectCard
 						title="Project Title"
-						src="/project-2.jpg"
+						src="/assets/project-2.jpg"
 						alt="Projekat"
 						description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
 						href="/project-3"
 					/>
 					<ProjectCard
 						title="Project Title"
-						src="/project-2.jpg"
+						src="/assets/project-2.jpg"
 						alt="Projekat"
 						description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
 						href="/project-4"

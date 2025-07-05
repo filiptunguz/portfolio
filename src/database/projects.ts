@@ -1,13 +1,8 @@
-type ProjectScreenshotPoint = {
-	text: string;
-	isBullet: boolean;
-};
-
 type ProjectScreenshot = {
 	title: string;
 	src: string;
 	alt: string;
-	points: ProjectScreenshotPoint[];
+	points: string[];
 };
 
 export type Project = {
@@ -28,7 +23,28 @@ export const projects: Project[] = [
 		description: 'My personal portfolio website built with Next.js, TypeScript, and Tailwind CSS.',
 		coverImage: '/projects/filip-tunguz-portfolio/cover.jpg',
 		githubUrl: 'https://github.com/filiptunguz/portfolio',
-		screenshots: [],
+		screenshots: [
+			{
+				title: 'Title 1',
+				src: '/assets/project-1.jpg',
+				alt: 'Screenshot 1',
+				points: [
+					'My personal portfolio website built with Next.js, TypeScript, and Tailwind CSS.',
+					'My personal portfolio website built with Next.js, TypeScript, and Tailwind CSS.',
+					'My personal portfolio website built with Next.js, TypeScript, and Tailwind CSS.',
+				],
+			},
+			{
+				title: 'Title 2',
+				src: '/assets/project-2.jpg',
+				alt: 'Screenshot 2',
+				points: [
+					'My personal portfolio website built with Next.js, TypeScript, and Tailwind CSS.',
+					'My personal portfolio website built with Next.js, TypeScript, and Tailwind CSS.',
+					'My personal portfolio website built with Next.js, TypeScript, and Tailwind CSS.',
+				],
+			},
+		],
 		metaTitle: 'Filip Tunguz Portfolio',
 		metaDescription:
 			'My personal portfolio website built with Next.js, TypeScript, and Tailwind CSS.',
