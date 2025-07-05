@@ -1,4 +1,4 @@
-import HeadingSection from '@/app/(base)/_components/heading-section';
+import HeadingSection from '@/sections/heading-section';
 
 export default function Home() {
 	return (
