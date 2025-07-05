@@ -39,7 +39,7 @@ function DesktopNavigation() {
 	const pathname = usePathname();
 
 	return (
-		<ul className="hidden xl:flex gap-8 items-center">
+		<ul className="hidden lg:flex gap-8 items-center">
 			{navigationItems.map((item: NavigationItem) => (
 				<li key={item.label}>
 					<Link
@@ -58,7 +58,7 @@ function DesktopNavigation() {
 function MobileNavigation() {
 	return (
 		<Sheet>
-			<SheetTrigger className="xl:hidden">
+			<SheetTrigger className="lg:hidden">
 				<CiMenuFries className="text-primary text-[2rem]" />
 			</SheetTrigger>
 			<SheetContent className="px-8 py-12 border-l-0">

@@ -8,5 +8,7 @@ export default function Narrower({
 	children: ReactNode;
 	className?: string;
 }) {
-	return <div className={cn('max-w-[1100px] mx-auto', className)}>{children}</div>;
+	return (
+		<div className={cn('max-w-[1100px] w-[calc(100%_-_2rem)] mx-auto', className)}>{children}</div>
+	);
 }
