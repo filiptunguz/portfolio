@@ -2,8 +2,8 @@ import Image from 'next/image';
 import Narrower from '@/components/narrower';
 import { Button } from '@/components/ui/button';
 import { MdOutlineFileDownload } from 'react-icons/md';
-import Link from 'next/link';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { ReactNode } from 'react';
 
 export default function HeadingSection() {
 	return (
@@ -61,10 +61,16 @@ function ProfileHeadingPart() {
 					</Button>
 					<span className="font-medium block text-center uppercase leading-none">Social Media</span>
 					<div className="flex gap-4 justify-center">
-						<SocialMediaIcon href="/">
+						<SocialMediaIcon
+							href="https://www.linkedin.com/in/filiptunguz/"
+							title="Filip Tunguz's LinkedIn profile"
+						>
 							<FaLinkedin />
 						</SocialMediaIcon>
-						<SocialMediaIcon href="/">
+						<SocialMediaIcon
+							href="https://github.com/filiptunguz"
+							title="Filip Tunguz's Github profile"
+						>
 							<FaGithub />
 						</SocialMediaIcon>
 					</div>
@@ -74,15 +80,24 @@ function ProfileHeadingPart() {
 	);
 }
 
-function SocialMediaIcon({ children, href }: { children: React.ReactNode; href: string }) {
+function SocialMediaIcon({
+	children,
+	href,
+	title,
+}: {
+	children: ReactNode;
+	href: string;
+	title: string;
+}) {
 	return (
-		<Link
+		<a
 			href={href}
 			target="_blank"
 			rel="noopener noreferrer"
+			title={title}
 			className="rounded-full border border-primary text-primary p-3 text-[1.25rem] hover:text-primary-foreground hover:bg-primary transition-all"
 		>
 			{children}
-		</Link>
+		</a>
 	);
 }
