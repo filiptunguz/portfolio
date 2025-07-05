@@ -1,3 +1,9 @@
+import HeadingSection from '@/app/(base)/_components/heading-section';
+
 export default function Home() {
-	return <p>Init</p>;
+	return (
+		<main>
+			<HeadingSection />
+		</main>
+	);
 }
