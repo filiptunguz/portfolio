@@ -9,7 +9,7 @@ export default function HeadingSection() {
 	return (
 		<section className="relative py-8 lg:py-32">
 			<Image
-				src="/coding-background.jpg"
+				src="/assets/coding-background.jpg"
 				alt="Coding Background"
 				fill
 				className="object-cover -z-10"
@@ -49,7 +49,7 @@ function ProfileHeadingPart() {
 					<Image
 						width="300"
 						height="300"
-						src="/filip-tunguz.jpg"
+						src="/assets/filip-tunguz.jpg"
 						alt="Filip Tunguz's picture"
 						className="rounded-full border-8 border-primary lg:size-[300px] size-[250px]"
 					/>
