@@ -5,8 +5,13 @@ import SocialMediaIcon from '@/components/ui/social-media-icon';
 import type { Metadata } from 'next';
 import Image from 'next/image';
 
-export const generateMetadata = ({ params }: { params: { projectSlug: string } }): Metadata => {
-	const project = projects.find((project) => project.slug === params.projectSlug);
+export const generateMetadata = async ({
+	params,
+}: {
+	params: Promise<{ projectSlug: string }>;
+}): Promise<Metadata> => {
+	const { projectSlug } = await params;
+	const project = projects.find((project) => project.slug === projectSlug);
 
 	return {
 		title: project?.metaTitle,
@@ -14,8 +19,13 @@ export const generateMetadata = ({ params }: { params: { projectSlug: string } }
 	};
 };
 
-export default function ProjectPage({ params }: { params: { projectSlug: string } }) {
-	const project = projects.find((project) => project.slug === params.projectSlug);
+export default async function ProjectPage({
+	params,
+}: {
+	params: Promise<{ projectSlug: string }>;
+}) {
+	const { projectSlug } = await params;
+	const project = projects.find((project) => project.slug === projectSlug);
 
 	if (!project) redirect('/');
 
