@@ -6,7 +6,7 @@ export default function ProjectsSection() {
 	return (
 		<section>
 			<Narrower className="space-y-8">
-				<h2 className="text-center text-3xl font-bold leading-none">My Projects</h2>
+				<h2>My Projects</h2>
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
 					<ProjectCard
 						title="Project Title"
@@ -66,7 +66,7 @@ function ProjectCard({
 			<div className="absolute top-0 left-0 size-full -z-10 group-hover:backdrop-blur-md transition-all bg-gradient-to-r from-background/90 to-background/70" />
 			<h3 className="text-xl font-bold leading-none">{title}</h3>
 			<p className="text-sm">{description}</p>
-			<Link href={href} className="text-primary hover:border-b border-primary">
+			<Link href={href} className="text-primary hover:underline underline-offset-4">
 				View Project
 			</Link>
 		</div>

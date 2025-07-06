@@ -44,7 +44,7 @@ function DesktopNavigation() {
 				<li key={item.label}>
 					<Link
 						href={item.href}
-						className={`uppercase font-medium border-primary ${pathname === item.href ? 'text-primary border-b' : 'hover:border-b'}`}
+						className={`uppercase font-medium underline-offset-4 ${pathname === item.href ? 'text-primary underline' : 'hover:underline'}`}
 					>
 						{item.label}
 					</Link>
@@ -82,7 +82,7 @@ function SideNavigationContent() {
 					<li key={item.label}>
 						<Link
 							href={item.href}
-							className={`uppercase font-medium ${pathname === item.href ? 'text-primary border-b border-primary' : 'hover:borer-b'}`}
+							className={`uppercase font-medium underline-offset-4 ${pathname === item.href ? 'text-primary underline border-primary' : 'hover:underline'}`}
 						>
 							{item.label}
 						</Link>
