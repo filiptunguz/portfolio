@@ -13,7 +13,7 @@ export default function ProjectsSection() {
 						src="/assets/project-1.jpg"
 						alt="Projekat"
 						description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-						href="/project-1"
+						href="/filip-tunguz-portfolio"
 					/>
 					<ProjectCard
 						title="Project Title"

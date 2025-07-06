@@ -30,7 +30,7 @@ export default function ProjectPage({ params }: { params: { projectSlug: string 
 				</div>
 				<p>{project.description}</p>
 			</section>
-			<hr className="border-secondary" />
+			<hr />
 			<div className="space-y-12 my-8">
 				{project.screenshots.map((screenshot, index) => (
 					<div

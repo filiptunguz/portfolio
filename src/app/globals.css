@@ -120,6 +120,9 @@
   h2 {
     @apply text-3xl font-bold mb-4 text-center leading-none;
   }
+  hr {
+    @apply border-secondary;
+  }
   .link {
     @apply text-primary underline-offset-4 hover:underline;
   }
