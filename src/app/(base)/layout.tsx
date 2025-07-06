@@ -1,4 +1,5 @@
 import Header from '@/components/header';
+import { Toaster } from '@/components/ui/sonner';
 
 export default function BaseLayout({
 	children,
@@ -9,6 +10,7 @@ export default function BaseLayout({
 		<>
 			<Header />
 			{children}
+			<Toaster />
 		</>
 	);
 }
