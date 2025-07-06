@@ -5,7 +5,7 @@ export default function AboutMeSection() {
 	return (
 		<section>
 			<Narrower className="space-y-4">
-				<h2>About Me</h2>
+				<h2 id="about-me">About Me</h2>
 				<p>
 					I am a Frontend Developer with four years of experience at{' '}
 					<ExternalLink

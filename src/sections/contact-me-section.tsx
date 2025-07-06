@@ -5,7 +5,7 @@ export default function ContactMeSection() {
 	return (
 		<section>
 			<Narrower className="space-y-4">
-				<h2>Contact/Hire Me</h2>
+				<h2 id="contact-me">Contact/Hire Me</h2>
 				<SendEmailForm />
 			</Narrower>
 		</section>

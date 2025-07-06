@@ -6,7 +6,7 @@ export default function ProjectsSection() {
 	return (
 		<section>
 			<Narrower className="space-y-8">
-				<h2>My Projects</h2>
+				<h2 id="projects">My Projects</h2>
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
 					<ProjectCard
 						title="Project Title"
