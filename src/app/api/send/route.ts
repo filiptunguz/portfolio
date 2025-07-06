@@ -11,23 +11,31 @@ export type EmailData = {
 	message: string;
 };
 
+/**
+ * This API route is used to send emails using the Resend service.
+ * Resend is only capable of sending emails, not receiving them, so I did this workaround - from
+ * the domain I own, to domain I own.
+ * This was the simplest way at the moment to implement a contact form.
+ */
 export async function POST(request: NextRequest) {
 	const payload = (await request.json()) as EmailData;
 
 	try {
 		const { data, error } = await resend.emails.send({
-			from: payload.from,
-			to: ['filiptunguz.su@gmail.com'],
+			from: `${payload.fullName} <no-reply@filiptunguz.com>`,
+			to: 'hiring@filiptunguz.com',
 			subject: payload.subject,
-			react: EmailTemplate({ fullName: payload.fullName, message: payload.message }),
+			react: EmailTemplate({ senderEmail: payload.from, message: payload.message }),
 		});
 
 		if (error) {
-			return Response.json({ error });
+			console.error(error);
+			return Response.json({ error }, { status: 500 });
 		}
 
 		return Response.json(data);
 	} catch (error) {
-		return Response.json({ error });
+		console.error(error);
+		return Response.json({ error }, { status: 500 });
 	}
 }
