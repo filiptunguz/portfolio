@@ -1,13 +1,13 @@
 interface EmailTemplateProps {
-	fullName: string;
+	senderEmail: string;
 	message: string;
 }
 
-export function EmailTemplate({ fullName, message }: EmailTemplateProps) {
+export function EmailTemplate({ senderEmail, message }: EmailTemplateProps) {
 	return (
 		<div>
 			<p>{message}</p>
-			<p>Sent by: {fullName}</p>
+			<p>Sent by: {senderEmail}</p>
 		</div>
 	);
 }

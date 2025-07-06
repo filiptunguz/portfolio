@@ -6,6 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import Narrower from '@/components/narrower';
+import { toast } from 'sonner';
 
 export default function SendEmailForm() {
 	const {
@@ -23,7 +24,13 @@ export default function SendEmailForm() {
 				subject: `Message from ${data.from}`,
 				message: data.message,
 			}),
-		}).then(console.log);
+		}).then((response) => {
+			if (response.ok) {
+				toast.success('Email sent successfully!', { description: 'I will get back to you soon.' });
+			} else {
+				toast.error('Failed to send email', { description: 'Please try again later.' });
+			}
+		});
 	}
 
 	return (
