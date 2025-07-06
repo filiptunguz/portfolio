@@ -6,6 +6,7 @@ import { Toaster as Sonner, ToasterProps } from 'sonner';
 const Toaster = ({ ...props }: ToasterProps) => {
 	const { theme = 'system' } = useTheme();
 
+	// TODO: remove important classes
 	return (
 		<Sonner
 			theme={theme as ToasterProps['theme']}
