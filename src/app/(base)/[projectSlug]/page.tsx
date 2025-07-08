@@ -39,9 +39,31 @@ export default async function ProjectPage({
 					</SocialMediaIcon>
 				</div>
 				<p>{project.description}</p>
+				{project.technologies && (
+					<div className="flex flex-wrap gap-2">
+						{project.technologies.map((tech) => (
+							<span
+								key={tech}
+								className="bg-secondary text-primary px-3 py-1 uppercase rounded-full text-sm font-medium"
+							>
+								{tech}
+							</span>
+						))}
+					</div>
+				)}
 			</section>
 			<hr />
-			<div className="space-y-12 my-8">
+			<section className="space-y-12 my-8">
+				<h2>More about this project</h2>
+				{project.mainImage && (
+					<Image
+						src={project.mainImage}
+						alt={`Main image for ${project.title}`}
+						className="rounded-3xl max-w-full mx-auto border-2 border-secondary"
+						width={800}
+						height={501}
+					/>
+				)}
 				{project.screenshots.map((screenshot, index) => (
 					<div
 						key={index}
@@ -52,19 +74,19 @@ export default async function ProjectPage({
 							<Image
 								src={screenshot.src}
 								alt={screenshot.alt}
-								className="rounded-3xl object-cover"
+								className="rounded-3xl object-cover border border-secondary"
 								fill
 							/>
 						</div>
 						<div className="space-y-4 lg:flex-1">
-							<h2 className="font-bold text-2xl">{screenshot.title}</h2>
+							<h3 className="font-bold text-2xl">{screenshot.title}</h3>
 							{screenshot.points.map((point, index) => (
 								<p key={index}>{point}</p>
 							))}
 						</div>
 					</div>
 				))}
-			</div>
+			</section>
 		</main>
 	);
 }
