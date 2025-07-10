@@ -14,7 +14,7 @@ export const generateMetadata = async ({
 	const project = projects.find((project) => project.slug === projectSlug);
 
 	return {
-		title: project?.metaTitle,
+		title: project?.metaTitle + ' | Project by Filip Tunguz',
 		description: project?.metaDescription,
 	};
 };

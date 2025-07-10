@@ -69,7 +69,7 @@ export const projects: Project[] = [
 		title: 'Isochrone Reachzone',
 		slug: 'isochrone-reachzone',
 		description:
-			'An interactive React + Vite + TypeScript + Tailwind component showcasing isochrone generation on a map. Users can select transport type (walk, drive, bus, bike) and travel time via a simple form. The map dynamically updates to display the reachable area (isochrone) from a fixed starting point, centering and adjusting the view on each change.',
+			'An interactive component showcasing isochrone generation on a map. Users can select transport type (walk, drive, bus, bike) and travel time via a simple form. The map dynamically updates to display the reachable area (isochrone) from a fixed starting point, centering and adjusting the view on each change.',
 		coverImage: '/assets/isochrone-reachzone/full-app.webp',
 		githubUrl: 'https://github.com/filiptunguz/isochrone-reachzone',
 		mainImage: '/assets/isochrone-reachzone/isochrone-reachzone.gif',
@@ -108,5 +108,58 @@ export const projects: Project[] = [
 		metaTitle: 'Isochrone Reachzone',
 		metaDescription:
 			'An interactive React + Vite + TypeScript + Tailwind component showcasing isochrone generation on a map. Users can select transport type (walk, drive, bus, bike) and travel time via a simple form. The map dynamically updates to display the reachable area (isochrone) from a fixed starting point, centering and adjusting the view on each change.',
+	},
+	{
+		title: 'Credit Calculator',
+		slug: 'credit-calculator',
+		description:
+			'Credit Calculator is a tool that helps users check their creditworthiness for both mortgage and cash loans. It validates employment and contract data, handles complex financial inputs with error checking, and calculates loan potential, monthly burden, and eligibility based on real-time input.',
+		coverImage: '/assets/credit-calculator/credit-calculator-cover.webp',
+		githubUrl: 'https://github.com/filiptunguz/credit-calculator',
+		mainImage: '/assets/credit-calculator/credit-calculator.gif',
+		technologies: ['React', 'JavaScript', 'TypeScript', 'Tailwind CSS', 'Vite'],
+		screenshots: [
+			{
+				title: 'Basic Employment Data',
+				src: '/assets/credit-calculator/basic-employment-data.webp',
+				alt: 'Basic Employment Data Section',
+				points: [
+					'Users enter basic employment details, including contract type and duration of current employment.',
+					'The system checks if the user meets minimum conditions—such as being employed for over six months and having a valid contract.',
+					'Based on this, it shows whether the user can proceed or highlights specific eligibility issues.',
+				],
+			},
+			{
+				title: 'Financial Data',
+				src: '/assets/credit-calculator/error-handling.webp',
+				alt: 'Financial Data Section',
+				points: [
+					'Users provide financial details such as salary, loan installments, credit card debt, acceptable overdraft, nominal interest rate, and desired repayment period.',
+					'The system performs strict validation to ensure inputs are consistent and realistic—for example, salary must exceed total debt.',
+					'Errors are clearly displayed to guide users toward valid, creditworthy input.',
+				],
+			},
+			{
+				title: 'Key Financial Insights',
+				src: '/assets/credit-calculator/not-creditworthy.webp',
+				alt: 'Key Financial Insights Section',
+				points: [
+					'Based on the entered data, this section displays key financial insights: maximum possible monthly installment, total credit amount, salary charge percentage, and current debt burden.',
+					"If the user's debt exceeds acceptable limits, the system clearly indicates that they are not creditworthy, helping them understand and improve their financial standing.",
+				],
+			},
+			{
+				title: 'Credit Calculator Conclusion',
+				src: '/assets/credit-calculator/successful-calculation.webp',
+				alt: 'Credit Calculator Overview',
+				points: [
+					'This Credit Calculator guides users through three clear steps to assess their loan potential—starting with employment status, followed by financial input, and ending with a personalized credit overview.',
+					'It provides a structured and transparent way to understand how income, debt, and loan terms affect overall creditworthiness and borrowing capacity.',
+				],
+			},
+		],
+		metaTitle: 'Credit Calculator',
+		metaDescription:
+			'Credit Calculator is a tool that helps users check their creditworthiness for both mortgage and cash loans. It validates employment and contract data, handles complex financial inputs with error checking, and calculates loan potential, monthly burden, and eligibility based on real-time input.',
 	},
 ];
