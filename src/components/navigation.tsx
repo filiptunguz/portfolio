@@ -73,10 +73,10 @@ function SideNavigationContent() {
 
 	return (
 		<>
-			<SheetTitle>Navigation menu</SheetTitle>
-			<div className="py-12">
-				<span className="block text-xl font-bold text-center">LOGO</span>
-			</div>
+			<SheetTitle className="hidden">Navigation menu</SheetTitle>
+			{/*<div className="py-12">*/}
+			{/*	<span className="block text-xl font-bold text-center">LOGO</span>*/}
+			{/*</div>*/}
 			<ul className="flex flex-col gap-4">
 				{navigationItems.map((item: NavigationItem) => (
 					<li key={item.label}>
