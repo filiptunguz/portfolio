@@ -10,7 +10,7 @@ const jetBrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
 	title: 'Filip Tunguz - Frontend Developer',
 	description:
-		'TODO: I am a frontend developer with a passion for creating beautiful and functional web applications. I specialize in React, Next.js, and TypeScript, and I love building user-friendly interfaces that provide a great user experience.',
+		'Frontend developer with 4 years of experience, specializing in React, Next.js, and TypeScript, with a strong focus on performance and scalable architecture. I enjoy building user-friendly interfaces with Tailwind and am currently expanding into mobile development using React Native with Expo for cross-platform consistency.',
 };
 
 export default function RootLayout({
