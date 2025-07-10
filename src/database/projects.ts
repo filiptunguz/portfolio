@@ -117,7 +117,15 @@ export const projects: Project[] = [
 		coverImage: '/assets/credit-calculator/credit-calculator-cover.webp',
 		githubUrl: 'https://github.com/filiptunguz/credit-calculator',
 		mainImage: '/assets/credit-calculator/credit-calculator.gif',
-		technologies: ['React', 'JavaScript', 'TypeScript', 'Tailwind CSS', 'Vite'],
+		technologies: [
+			'React',
+			'Zod',
+			'React Hook Form',
+			'JavaScript',
+			'TypeScript',
+			'Tailwind CSS',
+			'Vite',
+		],
 		screenshots: [
 			{
 				title: 'Basic Employment Data',
