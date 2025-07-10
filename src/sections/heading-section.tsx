@@ -56,8 +56,10 @@ function ProfileHeadingPart() {
 					<div className="absolute top-1/2 left-1/2 transform -z-10 -translate-x-1/2 -translate-y-1/2 size-2/3 bg-primary rounded-full animate-ping" />
 				</div>
 				<div className="-mt-[150px] pt-[174px] pb-6 px-4 bg-background border border-secondary/40 rounded-b-3xl flex flex-col gap-4 items-center">
-					<Button variant="outline" className="uppercase !px-6 !py-5 mb-2">
-						Download CV <MdOutlineFileDownload />
+					<Button variant="outline" className="uppercase !px-6 !py-5 mb-2" type="submit" asChild>
+						<a href="/assets/Filip_Tunguz_CV.pdf" download="Filip_Tunguz_CV.pdf">
+							Download CV <MdOutlineFileDownload />
+						</a>
 					</Button>
 					<span className="font-medium block text-center uppercase leading-none">Social Media</span>
 					<div className="flex gap-4 justify-center">
