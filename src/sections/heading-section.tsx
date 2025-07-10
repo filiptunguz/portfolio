@@ -49,7 +49,7 @@ function ProfileHeadingPart() {
 					<Image
 						width="300"
 						height="300"
-						src="/assets/filip-tunguz.jpg"
+						src="/assets/filip_tunguz.jpg"
 						alt="Filip Tunguz's picture"
 						className="rounded-full border-8 border-primary lg:size-[300px] size-[250px]"
 					/>
