@@ -36,7 +36,7 @@ export default function SendEmailForm() {
 	return (
 		<form
 			onSubmit={handleSubmit(onSubmit)}
-			className="p-6 rounded-3xl border border-secondary space-y-4"
+			className="p-6 rounded-3xl border border-secondary space-y-4 max-w-[700px] w-full"
 		>
 			<div>
 				<label htmlFor="name" className="font-medium">

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Narrower from '@/components/narrower';
 import { Button } from '@/components/ui/button';
-import { MdOutlineFileDownload } from 'react-icons/md';
+import { MdOutlineEmail, MdOutlineFileDownload } from 'react-icons/md';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import SocialMediaIcon from '@/components/ui/social-media-icon';
 
@@ -72,6 +72,9 @@ function ProfileHeadingPart() {
 							title="Filip Tunguz's Github profile"
 						>
 							<FaGithub />
+						</SocialMediaIcon>
+						<SocialMediaIcon href="mailto:filiptunguz.su@gmail.com" title="Filip Tunguz's Email">
+							<MdOutlineEmail />
 						</SocialMediaIcon>
 					</div>
 				</div>

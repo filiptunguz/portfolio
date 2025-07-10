@@ -18,15 +18,11 @@ const navigationItems = [
 	},
 	{
 		label: 'Projects',
-		href: '#projects',
+		href: '/#projects',
 	},
 	{
 		label: 'About',
-		href: '#about-me',
-	},
-	{
-		label: 'Contact',
-		href: '#contact-me',
+		href: '/#about-me',
 	},
 ];
 
@@ -101,7 +97,7 @@ function SideNavigationContent() {
 function HireMeButton() {
 	return (
 		<Button>
-			<Link href="#contact-me">Hire me</Link>
+			<Link href="/#contact-me">Contact me</Link>
 		</Button>
 	);
 }
